@@ -1,0 +1,30 @@
+/* ── Incident Details ─────────────────────────────────────────────────────── */
+
+.incidentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.incidentDetailRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: #fafaf8;
+  border-radius: 8px;
+  border: 1px solid #f0eeeb;
+}
+
+.incidentDetailLabel {
+  font-weight: 600;
+  color: #444;
+  font-size: 13px;
+}
+
+.incidentDetailValue {
+  color: #333;
+  font-size: 14px;
+  word-break: break-word;
+}

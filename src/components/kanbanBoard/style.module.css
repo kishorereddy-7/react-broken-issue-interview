@@ -1,0 +1,88 @@
+.kanban {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow-x: auto;
+  min-height: calc(100vh - 200px);
+  align-items: flex-start;
+}
+
+.kanban::-webkit-scrollbar {
+  height: 6px;
+}
+
+.kanban::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.kanban::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.kanban::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+  min-width: 300px;
+  flex-shrink: 0;
+  --severity-color: #999;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 2px solid var(--severity-color, #f0f0f0);
+  background: #fafafa;
+  border-radius: 8px 8px 0 0;
+}
+
+.columnHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #e8e8e8;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.columnContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+}
+
+.columnContent > li {
+  list-style: none;
+}
